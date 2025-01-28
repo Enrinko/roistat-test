@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <link href="index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<script defer>
+  setTimeout(function () {
+    document.getElementById("is_interested").checked = true;
+    console.log(document.getElementById("is_interested").checked);
+  }, 30000)
+</script>
+<div class="centred">
+  <form method="GET" action="leads.php">
+    <div class="mb-3">
+      <label for="name" class="form-label">ФИО</label>
+      <input type="text" class="form-control" name="name" id="name" placeholder="">
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Адрес электронной почты</label>
+      <input type="email" class="form-control" name="email" id="email">
+    </div>
+    <div class="mb-3">
+      <label for="phone" class="form-label">Номер телефона</label>
+      <input type="text" class="form-control" name="phone" id="phone">
+    </div>
+    <div class="mb-3">
+      <label for="price" class="form-label">Цена</label>
+      <input type="text" class="form-control" name="price" id="price">
+    </div>
+    <input type="checkbox" id="is_interested" name="is_interested" class="invisible">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+</body>
+</html>
